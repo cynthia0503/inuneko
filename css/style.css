@@ -1,0 +1,673 @@
+/* ========== Base ========== */
+body {
+  /* background-color: #f1f1f1; */
+  margin: 0;
+}
+
+#wrap {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 750px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+#wrap img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+#wrap video {
+  width: 100%;
+}
+
+/* ========== Animation ========== */
+.fade-up,
+.fade-down,
+.fadein-blur {
+  opacity: 0;
+}
+
+.fadein-up-active {
+  animation: fadeUPAnime 1s forwards;
+}
+
+@keyframes fadeUPAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.txt,
+.txt2 {
+  position: absolute;
+}
+
+.img {
+  position: absolute;
+}
+
+.btn {
+  width: 91%;
+  left: 5%;
+  bottom: 8%;
+  animation: flare-scale-btn 2s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes flare-scale-btn {
+  0% {
+    transform: scale(1);
+    /* 通常サイズ */
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* 拡大 */
+  }
+
+  100% {
+    transform: scale(1);
+    /* 元に戻る */
+  }
+}
+
+/* ========== Sections ========== */
+.fv {
+  position: relative;
+  width: 100%;
+  /* z-index: 2; */
+  height: auto;
+
+}
+
+.fv .img {
+  z-index: 2 !important;
+  height: auto;
+  right: 0;
+  /* z-index: 1; */
+  bottom: 0%;
+}
+
+.fv .mov {
+  position: absolute;
+  width: 100%;
+  right: -1%;
+  z-index: 1;
+  bottom: 15%;
+}
+
+.results-1 {
+  position: relative;
+}
+
+.results-1 .img {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  bottom: 55%;
+}
+
+
+.voices-s {
+  position: relative;
+}
+
+.voices-inner {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  bottom: 0%;
+}
+
+/* ===== voices slider ===== */
+.voices-slider {
+  position: relative;
+}
+
+.voices-slider .swiper {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0%;
+  /* left: -5%; */
+  /* padding: 0 5%; */
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 80%;
+  height: auto;
+  padding: 0 1%;
+  margin-bottom: 5%;
+}
+
+.swiper-l .swiper-slide {
+  width: 100%;
+  transition-timing-function: linear !important;
+}
+
+.swiper-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== ボタン共通 ===== */
+.voices-slider .swiper-button-next::after,
+.voices-slider .swiper-button-prev::after {
+  display: none;
+}
+
+/* ===== next → 左向き ===== */
+.voices-slider .swiper-button-next {
+  width: 5rem;
+  height: 5rem;
+  background-image: url('../images/voice-sl-btnl.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scaleX(-1);
+  right: .5%;
+}
+
+/* ===== prev → 右向き ===== */
+.voices-slider .swiper-button-prev {
+  width: 5rem;
+  height: 5rem;
+  background-image: url('../images/voice-sl-btnl.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: .5%;
+}
+
+.swiper-pagination {
+  margin-bottom: -1%;
+}
+
+
+.voice-cta {
+  position: relative;
+}
+
+.voice-cta .btn {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  bottom: 3%;
+}
+
+.trouble-inner {
+  position: relative;
+}
+
+.trouble-inner .img {
+  position: absolute;
+  width: 73.4%;
+  left: 16%;
+  bottom: 29%;
+}
+
+.suggestion {
+  position: relative;
+}
+
+.suggestion .img1,
+.suggestion .img2,
+.suggestion .img3,
+.suggestion .img4 {
+  position: absolute;
+}
+
+.suggestion .img1 {
+  width: 30%;
+  left: 2%;
+  bottom: 61%;
+  z-index: 12;
+}
+
+.suggestion .img2 {
+  width: 33%;
+  right: 5%;
+  bottom: 58%;
+  z-index: 12;
+}
+
+
+.suggestion .img3 {
+  width: 55%;
+  z-index: 10;
+  left: 22.5%;
+  bottom: 27%;
+
+}
+
+.suggestion .img4 {
+  width: 22%;
+  z-index: 11;
+  left: 39%;
+  bottom: 33.5%;
+
+}
+
+
+.pont1-mov {
+  position: relative;
+}
+
+.pont1-mov .mov {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 5%;
+}
+
+.point2_inner {
+  position: relative;
+}
+
+.point2_inner .img {
+  position: absolute;
+  width: 89%;
+  left: 5.5%;
+  bottom: 75%;
+}
+
+.point3_inner {
+  position: relative;
+}
+
+.point3_inner .img1,
+.point3_inner .img2,
+.point3_inner .img3 {
+  position: absolute;
+}
+
+.point3_inner .img1 {
+  width: 87%;
+  left: 6.5%;
+  bottom: 69%;
+}
+
+
+
+
+.point3_inner .img2 {
+  width: 90%;
+  left: 5.4%;
+  bottom: 43.2%;
+
+}
+
+
+.point3_inner .img3 {
+  width: 87%;
+  left: 6.5%;
+  bottom: 6.4%;
+}
+
+
+
+.point3_inner2 {
+  position: relative;
+}
+
+.point3_inner2 .mov {
+  position: absolute;
+  width: 85%;
+  left: 7.8%;
+  bottom: 4%;
+  border-radius: 2rem;
+  /* overflow: hidden; */
+}
+
+
+.production1_inner {
+  position: relative;
+}
+
+.production1_inner .title {
+  position: absolute;
+  width: 92.2%;
+  left: 3.25%;
+  bottom: -13%;
+}
+
+
+.production2_inner {
+  position: relative;
+}
+
+
+.production2_inner .img1,
+.production2_inner .img2,
+.production2_inner .img3 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+
+.production2_inner .img1 {
+  bottom: 77%;
+  z-index: 13;
+}
+
+.production2_inner .img2 {
+  bottom: 53.2%;
+  z-index: 14;
+}
+
+.production2_inner .img3 {
+  bottom: 13.2%;
+  z-index: 15;
+}
+
+.results-2 {
+  position: relative;
+}
+
+
+.results-2 .img {
+  position: absolute;
+  left: 15%;
+  width: 71%;
+  bottom: 29%;
+}
+
+.results-2 .mov {
+  position: absolute;
+  display: flex;
+  justify-items: center;
+  left: 0;
+  bottom: 5.7%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.results-2 .mov video {
+  width: 33.3% !important;
+}
+
+.offer {
+  position: relative;
+}
+
+.offer .offer_inner {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0%;
+}
+
+.offer_inner_wrap {
+  position: relative;
+}
+
+.offer_inner_wrap .btn {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  bottom: 18%;
+}
+
+
+.offer-guarantee_inner .accordion {
+  width: 92%;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: -2%;
+  padding-bottom: 2rem;
+}
+
+
+
+.offer-guarantee_inner .accordion-btn {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  left: 20%;
+  padding: .5rem 2rem;
+  background-color: transparent;
+  border: 1.5px solid #4a8a9a;
+  color: #4a8a9a;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  display: flex;
+  /* ← 追加 */
+  align-items: center;
+  /* ← 追加 */
+  justify-content: center;
+  /* ← 追加 */
+  line-height: 1;
+  /* ← 追加 */
+}
+
+.accordion-btn.open .accordion-icon {
+  transform: rotate(90deg);
+}
+
+/* コンテンツ部分 */
+.accordion-content {
+  display: none;
+  padding: 0rem 0;
+  border-top: none;
+  color: #4a8a9a;
+  width: 80%;
+  margin-left: 11%;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.accordion-content.open {
+  display: block;
+}
+
+.offer-guarantee {
+  background-image: url(../images/offer-1_bg.webp);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  margin-top: -15%;
+}
+
+
+.offer-guarantee2 {
+  position: relative;
+}
+
+.offer-guarantee2 .btn {
+  position: absolute;
+  width: 92.7%;
+  left: 4.15%;
+  bottom: 5%;
+}
+
+
+.use {
+  position: relative;
+  overflow: hidden;
+}
+
+.use .img,
+.use .mov1,
+.use .mov2 {
+  position: absolute;
+}
+
+
+.use .img {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.use .mov1 {
+  width: 80%;
+  right: 0;
+  bottom: 60%;
+}
+
+
+.use .mov2 {
+  width: 80%;
+  right: 13%;
+  bottom: 14%;
+}
+
+.push-1 {
+  position: relative;
+}
+
+.push-1 .btn {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  bottom: 2%;
+}
+
+.offer2 {
+  position: relative;
+}
+
+.offer2 .offer_inner {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 2%;
+
+}
+
+.offer .offer-guarantee {
+  margin-top: 0 !important;
+  padding-top: 13%;
+}
+
+
+
+.offer-guarantee2 .offer-guarantee_inner {
+  background-image: url(../images/offer2_bg.webp) !important;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  padding-top: 3%;
+}
+
+.offer-guarantee2 .offer-guarantee_inner .accordion {
+  background-color: transparent;
+}
+
+.faq {
+  background-color: #fcfbfa;
+  width: 100%;
+}
+
+.faq_inner {
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 750px;
+}
+
+
+/* CSS */
+.faq_inner .accordion2 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.faq_inner .accordion-btn2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  /* padding: .5rem 2rem; */
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+  background-color: #fcfbfa;
+  border: none;
+  outline: none;
+}
+
+.accordion-icon2 {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  right: 10%;
+  color: #b78865;
+}
+
+.faq_inner .accordion-content2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0;
+  margin: 5px 5px;
+}
+
+.accordion-content2.open {
+  max-height: 500px;
+ 
+}
+
+
+@media (max-width: 750px) {
+
+  .voices-slider .swiper-button-next,
+  .voices-slider .swiper-button-prev {
+    width: 10%;
+    height: 10%;
+  }
+
+  .offer-guarantee_inner .accordion-btn {
+    font-size: 3vw;
+    padding: .5vw 5vw;
+    gap: 3vw;
+  }
+
+  .accordion-content {
+    font-size: 3vw;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .accordion-icon2 {
+  font-size: 5vw;
+}
+
+.accordion-content2.open {
+  max-height: 300px;
+}
+}
