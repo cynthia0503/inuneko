@@ -1,3 +1,20 @@
+
+$(function () {
+  const $btn = $('.floating-btn');
+  const troubleTop = $('.float-start').offset().top;
+
+  $(window).on('scroll', function () {
+    const scroll = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    if (scroll + windowHeight > troubleTop + 100) {
+      $btn.addClass('visible');
+    } else {
+      $btn.removeClass('visible');
+    }
+  });
+});
+
 // スクロール時のアニメーション
 $(function () {
   $(window).on('scroll', function () {
@@ -16,7 +33,6 @@ $(function () {
 });
 
 
-
 const swiper3 = new Swiper('.voices-slider .swiper', {
   loop: true,
   autoplay: {
@@ -32,21 +48,6 @@ const swiper3 = new Swiper('.voices-slider .swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-
-// JS
-// const accordions = document.querySelectorAll('.accordion');
-
-// accordions.forEach((accordion) => {
-//   const btn = accordion.querySelector('.accordion-btn');
-//   const content = accordion.querySelector('.accordion-content');
-
-//   btn.addEventListener('click', () => {
-//     btn.classList.toggle('open');
-//     content.classList.toggle('open');
-//   });
-// });
-
 
 
 
