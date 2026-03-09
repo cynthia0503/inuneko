@@ -508,9 +508,20 @@ body {
   position: absolute;
   width: 92.7%;
   left: 4.15%;
-  bottom: 5%;
+  bottom: 0%;
 }
 
+
+.offer-guarantee3 {
+  position: relative;
+}
+
+.offer-guarantee3 .btn {
+  position: absolute;
+  width: 92.7%;
+  left: 4.15%;
+  bottom: 8%;
+}
 
 .use {
   position: relative;
@@ -639,7 +650,7 @@ body {
 
 .accordion-content2.open {
   max-height: 500px;
- 
+
 }
 
 
@@ -664,10 +675,44 @@ body {
   }
 
   .accordion-icon2 {
-  font-size: 5vw;
+    font-size: 5vw;
+  }
+
+  .accordion-content2.open {
+    max-height: 300px;
+  }
 }
 
-.accordion-content2.open {
-  max-height: 300px;
+
+
+.floating-btn {
+  position: fixed;
+  bottom: -2%;
+  margin: 0 auto;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  justify-content: center;
+  width: 100% !important;
+  max-width: 750px !important;
+  /* background-color: rgba(245, 215, 0, 0.7); */
 }
+
+.floating-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-btn img {
+  max-width: 750px;
+  height: auto;
+  display: block;
+}
+
+.floating-btn.hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
